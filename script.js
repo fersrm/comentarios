@@ -3,7 +3,7 @@ const activo = document.getElementsByClassName('abierto');
 const numero = document.getElementById('numero');
 const todo = document.getElementById('todo');
 
-numero.innerHTML=noti.length ;
+numero.innerHTML=noti.length - activo.length ;
 for (let i = 0; i< noti.length; i++){
     noti[i].addEventListener('click',function(){
         this.classList.toggle('abierto')

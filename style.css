@@ -21,14 +21,15 @@ body{
     justify-content: center;
     flex-wrap: wrap;
 }
-header{
-    width: 100%;
-    display: flex;
-    justify-content: center;
+.contenedor{
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 1rem;
 }
 .contenedor_head{
     margin: 1rem 0;
-    width: 90%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -52,19 +53,15 @@ p{
     cursor: pointer;
     color: var(--blue);
 }
-.contenedor{
-    width: 90%;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    gap: 1rem;
-}
 .notificacion{
-    background-color: var(--Light_grayish_blue_1);
     display: flex;
     padding: 1rem;
     border-radius: 10px;
     cursor: default;
+    background-color: var(--Light_grayish_blue_1);
+}
+.notificacion:hover{
+    background-color: var(--Dark_grayish_blue);
 }
 .imgPerfil img{
     width: 45px;
@@ -125,6 +122,9 @@ p .gris:hover{
 .abierto{
     background-color: inherit;
 }
+.notificacion.abierto:hover{
+    background-color: inherit;
+}
 .abierto .punto{
     display: none;
 }
@@ -143,8 +143,14 @@ footer{
 @media screen and (min-width: 500px) {
     body{
         font-size: 16px;
-        }
-    .contenedor,.contenedor_head{
-            max-width: 650px;
+        background-color: var(--Light_grayish_blue_2);
+    }
+    .contenedor{
+            margin-top: 2rem;
+            padding: 1rem;
+            max-width: 670px;
+            background-color: var(--Very_light_grayish_blue);
+            border-radius: 10px;
+            box-shadow: 0 0 15px var(--Grayish_blue);
     }
 }
